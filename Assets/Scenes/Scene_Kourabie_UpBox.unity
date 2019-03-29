@@ -1351,6 +1351,7 @@ GameObject:
   - component: {fileID: 6330304412810859509}
   - component: {fileID: 8997187765521121467}
   - component: {fileID: 8997187765521121469}
+  - component: {fileID: 8997187765521121468}
   m_Layer: 0
   m_Name: Kourabie_Broken
   m_TagString: Untagged
@@ -1377,6 +1378,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8997187765521121468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997187765521121466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe4145b4a0553d48ab242c00c229ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 8997187765521121467}
 --- !u!65 &8997187765521121469
 BoxCollider:
   m_ObjectHideFlags: 0
