@@ -5,7 +5,7 @@ using UnityEngine;
 public class animationController : MonoBehaviour
 {
     public Animator anim;
-    bool state = false; //=true when already broken, = false when it can be break
+    bool broken = false; //=true when is broken, = false when it isn't broken
 
     // Start is called before the first frame update
     void Start()
@@ -15,16 +15,16 @@ public class animationController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!state)
+        if (!broken)
         {
             anim.Play("Kourabie_Break");
-            anim.Play("Default_State");
+            broken = true;
         }
         else
         {
-
             anim.Play("Kourabie_Break_Reverse");
-            anim.Play("Default_State");
+            Debug.Log("Done with playing backward");
+            broken = false;
         }
     }
 }
