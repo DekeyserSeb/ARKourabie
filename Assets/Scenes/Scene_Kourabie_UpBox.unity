@@ -1040,7 +1040,6 @@ GameObject:
   - component: {fileID: 2939394692921057794}
   - component: {fileID: 3505784982952550438}
   - component: {fileID: 43235246945549778}
-  - component: {fileID: 2939394692921294371}
   m_Layer: 0
   m_Name: Kourabie_Bis_Break_WithoutAlm
   m_TagString: Untagged
@@ -1048,25 +1047,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &2939394692921294371
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939394692921294370}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: df416b9e9e7c5cc4c805404c9d8a227f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2939394693232372936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1076,6 @@ GameObject:
   - component: {fileID: 2939394693232799978}
   - component: {fileID: 6765865179741740880}
   - component: {fileID: 1216254554608445986}
-  - component: {fileID: 2939394693232372939}
   m_Layer: 0
   m_Name: Textured_Kourabie_Bis_BreakWithAlm_mat
   m_TagString: Untagged
@@ -1104,25 +1083,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &2939394693232372939
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939394693232372938}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bce617cc113c73442834d20352a2cf3f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2939394693232799976
 Transform:
   m_ObjectHideFlags: 0
@@ -1242,7 +1202,7 @@ PrefabInstance:
     - target: {fileID: 6418109628971177545, guid: da9be342d0e3e764a9d4aa7ecba4f80d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6418109628970748521, guid: da9be342d0e3e764a9d4aa7ecba4f80d,
         type: 3}
@@ -1389,6 +1349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6330304412810859509}
+  - component: {fileID: 8997187765521121467}
   m_Layer: 0
   m_Name: Kourabie_Broken
   m_TagString: Untagged
@@ -1396,3 +1357,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &8997187765521121467
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997187765521121466}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a72f9f0b82528e240a164e1b73acb09a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
