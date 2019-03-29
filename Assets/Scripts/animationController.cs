@@ -12,11 +12,9 @@ public class animationController : MonoBehaviour
         anim.GetComponent<Animator>();    
     }
 
- 
-
     private void OnMouseDown()
     {
         anim.Play("Kourabie_Break");
-        //anim.ResetTrigger("Kourabie_Break");
+        anim.Play("Default_State");
     }
 }
