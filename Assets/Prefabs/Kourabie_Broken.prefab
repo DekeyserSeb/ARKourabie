@@ -86,6 +86,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247087986092275706}
+  - component: {fileID: 8521417803817031744}
+  - component: {fileID: 4271109828499729714}
   m_Layer: 0
   m_Name: Textured_Kourabie_Bis_BreakWithAlm_mat
   m_TagString: Untagged
@@ -108,6 +110,36 @@ Transform:
   m_Father: {fileID: 8970823571503387877}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.703, y: 4.182, z: 6.6850004}
+--- !u!64 &8521417803817031744
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247087986092305370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!54 &4271109828499729714
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247087986092305370}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &247087986669861168
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +226,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247087986670216466}
+  - component: {fileID: 1945566096959334198}
+  - component: {fileID: 3116100524923157186}
   m_Layer: 0
   m_Name: Kourabie_Bis_Break_WithoutAlm
   m_TagString: Untagged
@@ -216,6 +250,36 @@ Transform:
   m_Father: {fileID: 8970823571503387877}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 1.8030001, y: -42.108, z: -1.7860001}
+--- !u!64 &1945566096959334198
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247087986669861170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
+--- !u!54 &3116100524923157186
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247087986669861170}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6303746771325831082
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,8 +289,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8970823571503387877}
-  - component: {fileID: 1989407752738193795}
-  - component: {fileID: 1989407752738193796}
   m_Layer: 0
   m_Name: Kourabie_Broken
   m_TagString: Untagged
@@ -241,7 +303,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6303746771325831082}
-  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0.00000028088027}
   m_LocalPosition: {x: -0.041, y: 0.5424666, z: -0.23660956}
   m_LocalScale: {x: 0.44880486, y: 0.44880486, z: 0.44880486}
   m_Children:
@@ -249,34 +311,4 @@ Transform:
   - {fileID: 247087986670216466}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1989407752738193795
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6303746771325831082}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &1989407752738193796
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6303746771325831082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
