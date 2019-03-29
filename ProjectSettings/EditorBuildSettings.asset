@@ -5,19 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/UI.unity
     guid: 50f5da0d77f87e349bdd0419a554ad7f
   - enabled: 1
     path: Assets/Scenes/Scene_Kourabie_UpBox.unity
     guid: 773d08da9e6e9d54c859f3e825500a3b
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: f42e7aa0bc1c9f24697d09f3f0d1f629
-  - enabled: 0
-    path: Assets/Scenes/fefe.unity
-    guid: 362f10b8cd59e734a91a22d316593fca
   m_configObjects: {}
