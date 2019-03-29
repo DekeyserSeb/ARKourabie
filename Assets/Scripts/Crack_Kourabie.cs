@@ -9,7 +9,7 @@ public class Crack_Kourabie : MonoBehaviour
     private void OnMouseDown()
     {
         //Instantiate(brokenVersion, transform.position, transform.rotation);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         brokenVersion.SetActive(true);
     }
 }
