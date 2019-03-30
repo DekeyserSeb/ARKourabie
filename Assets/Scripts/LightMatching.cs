@@ -58,12 +58,8 @@ public class LightMatching : MonoBehaviour
         GraphicsSettings.lightsUseLinearIntensity = true;
         GraphicsSettings.lightsUseColorTemperature = true;
         // set up pixel format
-#if UNITY_EDITOR
-        //modified by GI
         mPixelFormat = PIXEL_FORMAT.GRAYSCALE; // Need Grayscale for Editor
-#else
-        mPixelFormat = Image.PIXEL_FORMAT.RGB888; // Use RGB888 for mobile
-#endif
+
 
         // API for getting Vuforia Callbacks as of Unity 2018.1.0f2. 
         //The OnVuforiaStarted event is required for getting the camera pixel data for sure
