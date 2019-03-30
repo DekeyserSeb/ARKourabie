@@ -1013,7 +1013,11 @@ MonoBehaviour:
   LightOutput2: {fileID: 0}
   debugging: 0
   m_LightToEffect: {fileID: 287978146}
-  intensityModifier: 15
+  m_LightToEffect1: {fileID: 528367716}
+  m_LightToEffect2: {fileID: 504568473}
+  m_LightToEffect3: {fileID: 1413399767}
+  m_LightToEffect4: {fileID: 727532651}
+  intensityModifier: 10.37
   temperatureModifier: 3000
 --- !u!114 &2021378227
 MonoBehaviour:
@@ -1301,7 +1305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8997187765521121466}
   m_LocalRotation: {x: -0.0060000964, y: -0.99841887, z: 0.006203426, w: -0.055545382}
-  m_LocalPosition: {x: -0.025, y: 0.5441, z: -0.241}
+  m_LocalPosition: {x: -0.025, y: 0.499, z: -0.156}
   m_LocalScale: {x: 0.44880486, y: 0.44880486, z: 0.44880486}
   m_Children:
   - {fileID: 2939394693232799978}
@@ -1334,12 +1338,12 @@ PrefabInstance:
     - target: {fileID: 6418109628970748521, guid: da9be342d0e3e764a9d4aa7ecba4f80d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35170078
+      value: 0.307
       objectReference: {fileID: 0}
     - target: {fileID: 6418109628970748521, guid: da9be342d0e3e764a9d4aa7ecba4f80d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.067587614
+      value: 0.017
       objectReference: {fileID: 0}
     - target: {fileID: 6418109628970748521, guid: da9be342d0e3e764a9d4aa7ecba4f80d,
         type: 3}

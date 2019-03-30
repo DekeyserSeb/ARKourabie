@@ -23,7 +23,8 @@ using Image = Vuforia.Image;
 public class LightMatching : MonoBehaviour
 {
     private bool mAccessCameraImage = true;
-    // camera image pixel 
+    // camera image pixel
+    //modified by GI
     private PIXEL_FORMAT mPixelFormat = PIXEL_FORMAT.UNKNOWN_FORMAT;// or RGBA8888, RGB888, RGB565, YUV, GRAYSCALE
     // Boolean flag telling whether the pixel format has been registered
     private bool mFormatRegistered = false;
@@ -34,6 +35,10 @@ public class LightMatching : MonoBehaviour
     public bool debugging;
     //This is the directional light I was using in my scene. 
     public Light m_LightToEffect;
+    public Light m_LightToEffect1;
+    public Light m_LightToEffect2;
+    public Light m_LightToEffect3;
+    public Light m_LightToEffect4;
     // This color variable is being used to change the ambient light in the scene. goes from white to black depending on brightness of lights
     // You might want to thake that out depending on how your scene is looking
     private Color lightColor = new Color(1, 1, 1, 1);
@@ -54,6 +59,7 @@ public class LightMatching : MonoBehaviour
         GraphicsSettings.lightsUseColorTemperature = true;
         // set up pixel format
 #if UNITY_EDITOR
+        //modified by GI
         mPixelFormat = PIXEL_FORMAT.GRAYSCALE; // Need Grayscale for Editor
 #else
         mPixelFormat = Image.PIXEL_FORMAT.RGB888; // Use RGB888 for mobile
@@ -157,6 +163,10 @@ public class LightMatching : MonoBehaviour
                         totalLuminance *= intensityModifier;
                         Debug.Log("Total luminance ========================" + totalLuminance);
                         m_LightToEffect.intensity = (float)totalLuminance;
+                        m_LightToEffect1.intensity = (float)totalLuminance;
+                        m_LightToEffect2.intensity = (float)totalLuminance;
+                        m_LightToEffect3.intensity = (float)totalLuminance;
+                        m_LightToEffect4.intensity = (float)totalLuminance;
                         //originally tried to change color of light in scene but it looked flickery. Could be fun though for someone to try light color effects
                         //  m_LightToEffect.color = lightColor;
 
