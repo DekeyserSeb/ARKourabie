@@ -71,9 +71,10 @@ public class LightMatching : MonoBehaviour
         //  DeviceTrackerARController.Instance.RegisterDevicePoseStatusChangedCallback(OnDevicePoseStatusChanged);
 
         //text used for debugging
-        //LightOutput1.text = "";
-        //LightOutput2.text = "";
-
+        /* //commented by GI because it made error at launch in Unity
+        LightOutput1.text = "";
+        LightOutput2.text = "";
+        */
     }
 
     private void OnVuforiaStarted()
@@ -151,7 +152,8 @@ public class LightMatching : MonoBehaviour
                         lightColor = new Color(ligtColorNum, ligtColorNum, ligtColorNum, 1.0f);
                         Debug.Log("color ++++++++++++++++++++++++++++++++++++++++++++++++++++" + ligtColorNum);
                         // I got this math from someone else's code. seems to convert totalLuminance to smaller number for adjusting light luminance.
-                        totalLuminance /= 80.0;
+                        //adjusted by GI
+                        totalLuminance /= 75.0;
                         totalLuminance *= intensityModifier;
                         Debug.Log("Total luminance ========================" + totalLuminance);
                         m_LightToEffect.intensity = (float)totalLuminance;
