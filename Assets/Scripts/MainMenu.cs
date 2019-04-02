@@ -13,15 +13,15 @@ public class MainMenu : MonoBehaviour
     }
 
 
-    public void Permission()
-    {
+    //public void Permission()
+    //{
 
-        AndroidRuntimePermissions.Permission result = AndroidRuntimePermissions.RequestPermission("android.permission.CAMERA");
-        if (result == AndroidRuntimePermissions.Permission.Granted)
-            Debug.Log("We have permission to access the camera!");
-        else
-            Debug.Log("Permission state: " + result);
-    }
+    //    AndroidRuntimePermissions.Permission result = AndroidRuntimePermissions.RequestPermission("android.permission.CAMERA");
+    //    if (result == AndroidRuntimePermissions.Permission.Granted)
+    //        Debug.Log("We have permission to access the camera!");
+    //    else
+    //        Debug.Log("Permission state: " + result);
+    //}
 
     public void QuitGame()
     {
