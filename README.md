@@ -5,7 +5,7 @@ FR
 VERSION master - dernières update:
 -Suite et fin de l'animation 3D
 -Améliorations visuelles dans la partie AR : éclairage dynamique en fonction de la luminosité réelle ambiante
--Suite de l'interface
+-Suite de l'interface plus animations AR
 
 ENG:
 Master version - last updates:
