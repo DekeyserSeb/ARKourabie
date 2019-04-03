@@ -618,7 +618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &990226016
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5368,6 +5368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Textured_Kourabie_Bis_Break_Spite
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7a9cba3097b3d864aa6694261cc0c034, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7a9cba3097b3d864aa6694261cc0c034, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.305
@@ -6054,7 +6058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &2939394693232372936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,7 +6214,7 @@ PrefabInstance:
     - target: {fileID: 6418109628971177545, guid: da9be342d0e3e764a9d4aa7ecba4f80d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6418109628970748521, guid: da9be342d0e3e764a9d4aa7ecba4f80d,
         type: 3}
@@ -6366,7 +6370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &8997187765521121467
 Animator:
   serializedVersion: 3
@@ -6399,7 +6403,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Kourabie: {fileID: 1691839819}
-  Kourabie_Broken: {fileID: 0}
   anim: {fileID: 8997187765521121467}
 --- !u!65 &8997187765521121469
 BoxCollider:
