@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour
     {
 
         StartCoroutine(LoadAsync(SceneManager.GetActiveScene().buildIndex + 1));
-
     }
 
     IEnumerator LoadAsync(int sceneIndex)
