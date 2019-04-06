@@ -85,14 +85,16 @@ public class LightMatching : MonoBehaviour
 
         if (CameraDevice.Instance.SetFrameFormat(mPixelFormat, true))
         {
-            Debug.Log("Successfully registered pixel format " + mPixelFormat.ToString());
+            //modified by GI
+            //Debug.Log("Successfully registered pixel format " + mPixelFormat.ToString());
             mFormatRegistered = true;
         }
         else
         {
-            Debug.LogError("Failed to register pixel format " + mPixelFormat.ToString() +
-                "\n the format may be unsupported by your device;" +
-                "\n consider using a different pixel format.");
+            //modified by GI
+            //Debug.LogError("Failed to register pixel format " + mPixelFormat.ToString() +
+            //"\n the format may be unsupported by your device;" +
+            //    "\n consider using a different pixel format.");
             mFormatRegistered = false;
         }
     }
@@ -105,12 +107,14 @@ public class LightMatching : MonoBehaviour
     {
         if (paused)
         {
-            Debug.Log("App was paused");
+            //modified by GI
+            //Debug.Log("App was paused");
             UnregisterFormat();
         }
         else
         {
-            Debug.Log("App was resumed");
+            //modified by GI
+            //Debug.Log("App was resumed");
             RegisterFormat();
         }
     }
@@ -134,11 +138,13 @@ public class LightMatching : MonoBehaviour
                     imageInfo += " size: " + image.Width + " x " + image.Height + "\n";
                     imageInfo += " bufferSize: " + image.BufferWidth + " x " + image.BufferHeight + "\n";
                     imageInfo += " stride: " + image.Stride;
-                    Debug.Log(imageInfo);
+                    //modified by GI
+                    //Debug.Log(imageInfo);
                     byte[] pixels = image.Pixels;
                     if (pixels != null && pixels.Length > 0)
                     {
-                        Debug.Log("Image pixels: " + pixels[0] + "," + pixels[1] + "," + pixels[2] + ",...");
+                        //modified by GI
+                        //Debug.Log("Image pixels: " + pixels[0] + "," + pixels[1] + "," + pixels[2] + ",...");
                         // I have no idea what the double type is or does. seems to be similar to float
                         double totalLuminance = 0.0;
                         for (int p = 0; p < pixels.Length; p += 4)
@@ -152,12 +158,14 @@ public class LightMatching : MonoBehaviour
                         ligtColorNum = (float)totalLuminance * 0.0255f;
                         //ligtColorNum is put in for RGB. will change color along the gray scale
                         lightColor = new Color(ligtColorNum, ligtColorNum, ligtColorNum, 1.0f);
-                        Debug.Log("color ++++++++++++++++++++++++++++++++++++++++++++++++++++" + ligtColorNum);
+                        //modified by GI
+                        //Debug.Log("color ++++++++++++++++++++++++++++++++++++++++++++++++++++" + ligtColorNum);
                         // I got this math from someone else's code. seems to convert totalLuminance to smaller number for adjusting light luminance.
                         //adjusted by GI
                         totalLuminance /= 75.0;
                         totalLuminance *= intensityModifier;
-                        Debug.Log("Total luminance ========================" + totalLuminance);
+                        //modified by GI
+                        //Debug.Log("Total luminance ========================" + totalLuminance);
                         m_LightToEffect.intensity = (float)totalLuminance;
                         m_LightToEffect1.intensity = (float)totalLuminance;
                         m_LightToEffect2.intensity = (float)totalLuminance;
@@ -172,11 +180,13 @@ public class LightMatching : MonoBehaviour
                         RenderSettings.ambientIntensity = m_LightToEffect.intensity;
                         //I'm changing the color of the ambient light on the grayscale. It's a little redundant but I think it helps. Experiment and see how you feel. 
                         RenderSettings.ambientLight = lightColor;
-                        Debug.Log("light intensity = " + m_LightToEffect.intensity);
+                        //modified by GI
+                        //Debug.Log("light intensity = " + m_LightToEffect.intensity);
                         //I'm not exacly sure what the color temp does. It was a setting in someone else's code, but seems to be working out.
                         colorTemperature = (float?)(totalLuminance * temperatureModifier);
                         m_LightToEffect.colorTemperature = (float)colorTemperature;
-                        Debug.Log("calculating color temperature =========================" + colorTemperature);
+                        //modified by GI
+                        //Debug.Log("calculating color temperature =========================" + colorTemperature);
 
                         //Used for debugging so you can see if light changes;
                         if (debugging == true)
@@ -210,7 +220,8 @@ public class LightMatching : MonoBehaviour
 
     private void UnregisterFormat()
     {
-        Debug.Log("Unregistering camera pixel format " + mPixelFormat.ToString());
+        //modified by GI
+        //Debug.Log("Unregistering camera pixel format " + mPixelFormat.ToString());
         CameraDevice.Instance.SetFrameFormat(mPixelFormat, false);
         mFormatRegistered = false;
     }
@@ -223,12 +234,14 @@ public class LightMatching : MonoBehaviour
     {
         if (CameraDevice.Instance.SetFrameFormat(mPixelFormat, true))
         {
-            Debug.Log("Successfully registered camera pixel format " + mPixelFormat.ToString());
+            //modified by GI
+            //Debug.Log("Successfully registered camera pixel format " + mPixelFormat.ToString());
             mFormatRegistered = true;
         }
         else
         {
-            Debug.LogError("Failed to register camera pixel format " + mPixelFormat.ToString());
+            //modified by GI
+            //Debug.LogError("Failed to register camera pixel format " + mPixelFormat.ToString());
             mFormatRegistered = false;
         }
     }

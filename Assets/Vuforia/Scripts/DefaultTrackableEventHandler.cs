@@ -36,8 +36,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnDestroy()
     {
-        if (mTrackableBehaviour)
-            mTrackableBehaviour.UnregisterTrackableEventHandler(this);
+        //if (mTrackableBehaviour)
+            //mTrackableBehaviour.UnregisterTrackableEventHandler(this);
     }
 
     #endregion // UNITY_MONOBEHAVIOUR_METHODS
