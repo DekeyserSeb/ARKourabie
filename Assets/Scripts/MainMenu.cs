@@ -2,26 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // Permet de gèrer les scènes
+using UnityEditor;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Image Loader;
+    public Image Fade;
+    public Image Static;
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        StartCoroutine(LoadAsync(SceneManager.GetActiveScene().buildIndex + 1));
 
     }
 
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 
-    //public void Permission()
-    //{
+        Fade.gameObject.SetActive (false);
+        Static.gameObject.SetActive(false);
+        Loader.gameObject.SetActive(true);
 
-    //    AndroidRuntimePermissions.Permission result = AndroidRuntimePermissions.RequestPermission("android.permission.CAMERA");
-    //    if (result == AndroidRuntimePermissions.Permission.Granted)
-    //        Debug.Log("We have permission to access the camera!");
-    //    else
-    //        Debug.Log("Permission state: " + result);
-    //}
+        while (!operation.isDone)
+        {
+            Debug.Log(operation.progress);
+                yield return null;
+        }
+    }
+
 
     public void QuitGame()
     {
