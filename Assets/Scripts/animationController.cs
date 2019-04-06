@@ -5,6 +5,7 @@ using UnityEngine;
 public class animationController : MonoBehaviour
 {
     public GameObject Kourabie;
+    public GameObject Particules;
 
     public Animator anim;
     bool restart = false;
@@ -52,6 +53,7 @@ public class animationController : MonoBehaviour
         {
             gameObject.SetActive(false);
             Kourabie.SetActive(true);
+            Particules.SetActive(false);
             restart = false;
         }
     }

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Crack_Kourabie : MonoBehaviour
 {
-    public GameObject brokenVersion;
+    public GameObject BrokenVersion;
+    public GameObject EventToLaunch;
 
     private void OnMouseDown()
     {
         //Instantiate(brokenVersion, transform.position, transform.rotation);
         gameObject.SetActive(false);
-        brokenVersion.SetActive(true);
+        BrokenVersion.SetActive(true);
+        EventToLaunch.SetActive(true);
     }
 }
