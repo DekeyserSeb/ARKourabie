@@ -310,7 +310,7 @@ MonoBehaviour:
   mAspectRatio: 0.98842
   mImageTargetType: 0
   mWidth: 2.2281399
-  mHeight: 2.202338
+  mHeight: 2.2281399
 --- !u!114 &42052202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &389457666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3013,7 +3013,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e81c7ffe43884fe1b19242e13762398e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 893c22cd168c43458bb7e3dd8eafc563, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
