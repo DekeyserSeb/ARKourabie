@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Toggle_ChangeTextandColor : MonoBehaviour
+public class Toggle_Instructions_ChangeText : MonoBehaviour
 {
     private Text Label;
 
-    public void onValueChanged()
+    public void textUpdate()
     {
         Label = gameObject.GetComponentInChildren<Text>();
         if (gameObject.GetComponent<Toggle>().isOn)
         {
-            Label.text = "SCAN MODE :\n Kourabie Box";
+            Label.text = "Leave Instructions";
         }
         else
         {
-            Label.text = "SCAN MODE :\n QR Code";
+            Label.text = "See Instructions";
         }
     }
 }

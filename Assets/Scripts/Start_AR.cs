@@ -20,7 +20,7 @@ public class Start_AR : MonoBehaviour
     void Start()
     {
         VuforiaARController vuforia = VuforiaARController.Instance;
-
+        //crucial to launch Vuforia before setting the toggle : because incative target will not be taken into account by AR camera at the first launch
         if (vuforia != null)
             vuforia.RegisterVuforiaStartedCallback(StartAfterVuforia);
     }

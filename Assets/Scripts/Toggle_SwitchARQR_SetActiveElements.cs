@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Toggle_SetActive : MonoBehaviour
+public class Toggle_SwitchARQR_SetActiveElements : MonoBehaviour
 {
     public Toggle toggle;
     public GameObject Kour_Whole;
