@@ -6,13 +6,11 @@ using Vuforia;
 
 public class Start_AR : MonoBehaviour
 {
-    public GameObject Kourabie;
-    public GameObject Kourabie_Broken;
-    public GameObject Sugar_Particules;
     public GameObject ImageTarget_Top;
     public GameObject ImageTarget_Bottom;
     public GameObject ImageTargetQR;
-    public Toggle toggle;
+    public Toggle toggleAR;
+    public Toggle toggleInst;
 
     private bool mVuforiaStarted = false;
 
@@ -29,22 +27,24 @@ public class Start_AR : MonoBehaviour
     void StartAfterVuforia()
     {
         mVuforiaStarted = true;
-        if (Kourabie !=null && Kourabie_Broken != null && Sugar_Particules != null && ImageTarget_Top != null && ImageTarget_Bottom != null && ImageTargetQR != null && toggle != null)
+        if (ImageTarget_Top != null && ImageTarget_Bottom != null && ImageTargetQR != null && toggleAR != null && toggleInst != null)
         {
-        //all true to initialize correctly the AR Camera with all targets
-        ImageTargetQR.SetActive(true);
-        ImageTarget_Top.SetActive(true);
-        ImageTarget_Bottom.SetActive(true);
+            //all true to initialize correctly the AR Camera with all targets
+            ImageTargetQR.SetActive(true);
+            ImageTarget_Top.SetActive(true);
+            ImageTarget_Bottom.SetActive(true);
 
-        //to get only the good objects actives
-        Kourabie.SetActive(true);
-        Kourabie_Broken.SetActive(false);
-        Sugar_Particules.SetActive(false);
+            ////to start with Kourabie Box image target
+            //toggleAR.isOn = true;
+            //Debug.Log("Toggle AR is ON thanks to the script Start_AR");
+            
+            ////to start with hidden right things
+            //toggleInst.isOn = true;
+            //Debug.Log("Toggle Inst is ON thanks to the script Start_AR");
 
-        //toggle.isOn = false;
-        //to start with Kourabie Box image target
-        toggle.isOn = true;
-        Debug.Log("Toggle is On thanks to the script Start_AR");
+            ////to get a more reactive scroll in Instruction panel and preserve resources when Camera is not used
+            //this.gameObject.SetActive(false);
+            //Debug.Log("AR Cam inactive");
         }
     }
 }

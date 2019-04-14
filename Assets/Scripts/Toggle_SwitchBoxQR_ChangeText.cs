@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Toggle_SwitchARQR_ChangeText : MonoBehaviour
+public class Toggle_SwitchBoxQR_ChangeText : MonoBehaviour
 {
     private Text Label;
 
