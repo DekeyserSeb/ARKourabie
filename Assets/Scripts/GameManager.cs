@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
     private Text factText;
 
     [SerializeField]
+    private Text trueAnswerText;
+    [SerializeField]
+    private Text falseAnswerText;
+
+    [SerializeField]
     private float timeBetweenQuestion = 1f;
 
     void Start()
@@ -42,6 +47,16 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
 
         factText.text = currentQuestion.fact;
         //unansweredQuestion.RemoveAt(randomQuestionIndex);                               //On supprime de la liste
+
+        if (currentQuestion.isTrue)
+        {
+            trueAnswerText.text = "CORRECT!";
+            falseAnswerText.text = "WRONG!";
+        } else
+        {
+            trueAnswerText.text = "WRONG!";
+            falseAnswerText.text = "CORRECT!";
+        }
     }
 
     IEnumerator TransitionToNextQuestion()
