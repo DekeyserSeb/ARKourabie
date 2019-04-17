@@ -1,7 +1,7 @@
 ﻿
 [System.Serializable]
-public class question {
+public class Question {
 	
-	public string fact;
+	public string fact; //Question ou la réponse est vrai
 	public bool isTrue;
 }

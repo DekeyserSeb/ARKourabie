@@ -1,84 +1,81 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using System.Linq;
+using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UNE SERIE DE DONNEES, ARRAY OU LA LISTE
+                                         // LA LISTE EST UTILISE LORSQUE l'on doit resize le tout PENDANT la durée de l'application
+                                         // L'ARRAY EST UTILISE LORSQUE l'on ne va pas resize le nombre
+{
+    public Question[] questions;    // DE CETTE MANIERE LA SERIALISATION SE FAIT DIRECTEMENT, pourquoi ? Car dans la classe question, celle-ci est sérialisé
+    private static List<Question> unansweredQuestion;//on va refaire une liste pour pouvoir supprimer les questions de la listes déjà reçus  INCROYABLE DU CUL
+                                                     //Question non répondus
+    private Question currentQuestion;
 
-	public question[] questions;
-	public static List<question> unansweredQuestions;
+    [SerializeField]
+    private Text factText;
 
-	private question currentQuestion;
+    [SerializeField]
+    private float timeBetweenQuestion = 1f;
 
-	[SerializeField]
-	private Text factText;
+    void Start()
+    {
+        if (unansweredQuestion == null || unansweredQuestion.Count == 0)
+        {
+            unansweredQuestion = questions.ToList<Question>(); //ON A AJOUTER LES SYSTEM LINQ pour pouvoir utiliser les listes très facilement
+        }
 
-	[SerializeField]
-	private float timeBetweenQuestions = 1.0f ;
+        SetCurrentQuestion();
 
-	[SerializeField]
-	private Text trueAnswerText, falseAnswerText;
+        Debug.Log(currentQuestion.fact + " is " + currentQuestion.isTrue);
 
-	[SerializeField]
-	private Animator animator;
+       
+    }
 
-	void Start()
-	{
-		if (unansweredQuestions == null || unansweredQuestions.Count == 0) {
-			unansweredQuestions = questions.ToList<question> ();
-		}
+    private void SetCurrentQuestion()
+    {
+        int randomQuestionIndex = UnityEngine.Random.Range(0, unansweredQuestion.Count);
+        currentQuestion = unansweredQuestion[randomQuestionIndex];                      //On met la question dans la variable
 
-		SetCurrentQuestion ();
-	}
+        factText.text = currentQuestion.fact;
+        //unansweredQuestion.RemoveAt(randomQuestionIndex);                               //On supprime de la liste
+    }
 
-	void SetCurrentQuestion()
-	{
-		int randomQuestionsIndex = Random.Range (0,unansweredQuestions.Count);
-		currentQuestion = questions [randomQuestionsIndex];
+    IEnumerator TransitionToNextQuestion()
+    {
+        unansweredQuestion.Remove(currentQuestion); //on enlève l'élément pas l'index
 
-		if (currentQuestion.isTrue) {
-			trueAnswerText.text = "CORRECT";
-			falseAnswerText.text = "WRONG";
-		} else {
-			trueAnswerText.text = "WRONG";
-			falseAnswerText.text = "CORRECT";
-		}
+        yield return new WaitForSeconds(timeBetweenQuestion);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
-		factText.text = currentQuestion.fact;
+    public void userselectedtrue()
+    {
 
+        if (currentQuestion.isTrue)
+        {
+            Debug.Log("CORRECT!");
+        } else
+        {
+            Debug.Log("WRONG!");
+        }
+        StartCoroutine(TransitionToNextQuestion());
+    }
 
-	}
+    public void userselectedfalse()
+    {
 
-	IEnumerator TranstionToNextQuestion()
-	{
-		unansweredQuestions.Remove (currentQuestion);
-
-		yield return new WaitForSeconds (1.0f );
-		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
-	}
-
-	public void userSelectTrue()
-	{
-		animator.SetTrigger ("True");
-		if (currentQuestion.isTrue) {
-			Debug.Log ("Correct");
-		} else {
-			Debug.Log ("WRONG");
-		}
-		StartCoroutine (TranstionToNextQuestion());
-	}
-
-	public void userSelectFalse()
-	{
-		animator.SetTrigger ("False");
-		if (!currentQuestion.isTrue) {
-			Debug.Log ("Correct");
-		} else {
-			Debug.Log ("WRONG");
-		}
-
-		StartCoroutine (TranstionToNextQuestion());
-	}
+        if (currentQuestion.isTrue)
+        {
+            Debug.Log("WRONG!");
+        }
+        else
+        {
+            Debug.Log("CORRECT!");
+        }
+        StartCoroutine(TransitionToNextQuestion());
+    }
 }
