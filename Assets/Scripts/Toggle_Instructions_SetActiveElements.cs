@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Vuforia;
 
 public class Toggle_Instructions_SetActiveElements : MonoBehaviour
 {
@@ -23,8 +24,10 @@ public class Toggle_Instructions_SetActiveElements : MonoBehaviour
         {
             if (this.gameObject.GetComponent<Toggle>().isOn)
             {
-                ARCamera.SetActive(false);
-                Debug.Log("ARCam inactive");
+                //ARCamera.SetActive(false);
+                //Debug.Log("ARCam inactive");
+                ARCamera.GetComponentInChildren<VuforiaBehaviour>().enabled = false;
+                Debug.Log("AR Vuforia Behaviour is disabled");
                 Back_Button.SetActive(false);
                 Debug.Log("Back btn inactive");
                 Panel_Inst.SetActive(true);
@@ -32,7 +35,8 @@ public class Toggle_Instructions_SetActiveElements : MonoBehaviour
             }
             else
             {
-                ARCamera.SetActive(true);
+                //ARCamera.SetActive(true);
+                ARCamera.GetComponentInChildren<VuforiaBehaviour>().enabled = true;
                 Back_Button.SetActive(true);
                 Panel_Inst.SetActive(false);
             }
