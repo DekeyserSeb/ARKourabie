@@ -9,8 +9,11 @@ public class Back_Button : MonoBehaviour
 {
     public void GoBack()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        //SceneManager.LoadScene(0);
+        if (SceneManager.GetActiveScene().buildIndex > 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            //SceneManager.LoadScene(0);
+        }
         Debug.Log("Current Scene index" + (SceneManager.GetActiveScene().buildIndex - 1).ToString());
     }
 }
