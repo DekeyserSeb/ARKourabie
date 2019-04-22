@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="QR_Code_DL_APP" size="0.050000 0.050000" />
+    <ImageTarget name="QR_Code_PublicApp" size="0.029000 0.029000" />
     <ImageTarget name="Bottom" size="0.150000 0.149105" />
     <ImageTarget name="kour_Box_Cover_ImageTarget" size="0.150000 0.151634" />
   </Tracking>
