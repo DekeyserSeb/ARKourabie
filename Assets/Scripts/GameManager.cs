@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
 {
     public Question[] questions;    // DE CETTE MANIERE LA SERIALISATION SE FAIT DIRECTEMENT, pourquoi ? Car dans la classe question, celle-ci est sérialisé
     private static List<Question> unansweredQuestion;//on va refaire une liste pour pouvoir supprimer les questions de la listes déjà reçus  INCROYABLE DU CUL
-                                                     //Question non répondus
+    private static List<Sprite> unansweredImage;                                                 //Question non répondus
     private Question currentQuestion;
+    [SerializeField]
+    private Image currentImage;
 
     [SerializeField]
     private Text factText;
@@ -24,6 +26,10 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
     private Text falseAnswerText;
 
     [SerializeField]
+    private Sprite[] questImage;
+
+
+    [SerializeField]
     private float timeBetweenQuestion = 1f;
 
     void Start()
@@ -31,6 +37,7 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
         if (unansweredQuestion == null || unansweredQuestion.Count == 0)
         {
             unansweredQuestion = questions.ToList<Question>(); //ON A AJOUTER LES SYSTEM LINQ pour pouvoir utiliser les listes très facilement
+            unansweredImage = questImage.ToList<Sprite>();
         }
 
         SetCurrentQuestion();
@@ -43,7 +50,10 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
     private void SetCurrentQuestion()
     {
         int randomQuestionIndex = UnityEngine.Random.Range(0, unansweredQuestion.Count);
-        currentQuestion = unansweredQuestion[randomQuestionIndex];                      //On met la question dans la variable
+        currentQuestion = unansweredQuestion[randomQuestionIndex]; 
+        currentImage.sprite = unansweredImage[randomQuestionIndex];
+
+        //On met la question dans la variable
 
         factText.text = currentQuestion.fact;
         //unansweredQuestion.RemoveAt(randomQuestionIndex);                               //On supprime de la liste
@@ -62,7 +72,7 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
     IEnumerator TransitionToNextQuestion()
     {
         unansweredQuestion.Remove(currentQuestion); //on enlève l'élément pas l'index
-
+        unansweredImage.Remove(currentImage.sprite);
         yield return new WaitForSeconds(timeBetweenQuestion);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -72,9 +82,11 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
 
         if (currentQuestion.isTrue)
         {
+            factText.text = ("CORRECT!");
             Debug.Log("CORRECT!");
         } else
         {
+            factText.text = ("WRONG!");
             Debug.Log("WRONG!");
         }
         StartCoroutine(TransitionToNextQuestion());
@@ -86,10 +98,12 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
         if (currentQuestion.isTrue)
         {
             Debug.Log("WRONG!");
+            factText.text = ("WRONG!");
         }
         else
         {
             Debug.Log("CORRECT!");
+            factText.text = ("CORRECT!");
         }
         StartCoroutine(TransitionToNextQuestion());
     }

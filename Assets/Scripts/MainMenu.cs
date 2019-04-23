@@ -39,4 +39,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
 
     }
+
+    public void OpenWebSite()
+    {
+        Application.OpenURL("https://www.chrisanthidis.gr/en/");
+    }
 }
