@@ -12,11 +12,11 @@ public class Toggle_SwitchBoxQR_ChangeText : MonoBehaviour
         Label = gameObject.GetComponentInChildren<Text>();
         if (gameObject.GetComponent<Toggle>().isOn)
         {
-            Label.text = "SCAN MODE :\n Kourabie Box";
+            Label.text = "SCAN MODE:\n Kourabie Box";
         }
         else
         {
-            Label.text = "SCAN MODE :\n QR Code";
+            Label.text = "SCAN MODE:\n QR Code";
         }
     }
 }
