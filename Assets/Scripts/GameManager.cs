@@ -31,11 +31,15 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
 
     [SerializeField]
     private float timeBetweenQuestion = 1f;
+    private int reponse;
+    private int goodAnswer;
 
     void Start()
     {
         if (unansweredQuestion == null || unansweredQuestion.Count == 0)
         {
+            goodAnswer = 0;
+            reponse = 0;
             unansweredQuestion = questions.ToList<Question>(); //ON A AJOUTER LES SYSTEM LINQ pour pouvoir utiliser les listes très facilement
             unansweredImage = questImage.ToList<Sprite>();
         }
@@ -52,6 +56,7 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
         int randomQuestionIndex = UnityEngine.Random.Range(0, unansweredQuestion.Count);
         currentQuestion = unansweredQuestion[randomQuestionIndex]; 
         currentImage.sprite = unansweredImage[randomQuestionIndex];
+
 
         //On met la question dans la variable
 
@@ -74,7 +79,19 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
         unansweredQuestion.Remove(currentQuestion); //on enlève l'élément pas l'index
         unansweredImage.Remove(currentImage.sprite);
         yield return new WaitForSeconds(timeBetweenQuestion);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ++reponse;
+        if (reponse == questImage.Length)
+        {
+            factText.text = ("you have " + goodAnswer + " correct answers ;)");
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        } else
+        {
+            SetCurrentQuestion();
+        }
+        
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void userselectedtrue()
@@ -84,6 +101,7 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
         {
             factText.text = ("CORRECT!");
             Debug.Log("CORRECT!");
+            ++goodAnswer;
         } else
         {
             factText.text = ("WRONG!");
@@ -104,6 +122,7 @@ public class GameManager : MonoBehaviour //UNITY A DEUX MANIERE D'IMPLEMENTER UN
         {
             Debug.Log("CORRECT!");
             factText.text = ("CORRECT!");
+            ++goodAnswer;
         }
         StartCoroutine(TransitionToNextQuestion());
     }
