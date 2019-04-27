@@ -10,6 +10,11 @@ public class MainMenu : MonoBehaviour
     public Image Loader;
     public Image Fade;
     public Image Static;
+    private void Awake()
+    {
+        Screen.orientation = ScreenOrientation.Portrait;
+    }
+
 
     public void PlayGame()
     {

@@ -246,11 +246,11 @@ MonoBehaviour:
   questions:
   - fact: Chrisanthidis was established in Athens.
     isTrue: 0
-  - fact: there are hazelnuts in a kurabie
+  - fact: there are hazelnuts in a kourabie.
     isTrue: 0
-  - fact: there are no preservatives in kurabie
-    isTrue: 1
-  - fact: 'The company was founded in 1980 '
+  - fact: there are preservatives in kourabie.
+    isTrue: 0
+  - fact: The company was founded in 1980.
     isTrue: 1
   currentImage: {fileID: 1591294064}
   factText: {fileID: 282230474}
@@ -261,7 +261,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1722bfda66d96e245bcb3a9b01e5c39e, type: 3}
   - {fileID: 21300000, guid: c774ec5117db1634881b800a56410540, type: 3}
   - {fileID: 21300000, guid: c72c5943db727234f94ef60021a755b0, type: 3}
-  timeBetweenQuestion: 1
+  animTrue: {fileID: 1555709533}
+  animFalse: {fileID: 287126187}
+  animFinishTrue: {fileID: 1555709533}
+  animFinishFalse: {fileID: 287126187}
+  buttonTrue: {fileID: 1555709531}
+  buttonFalse: {fileID: 287126184}
+  timeBetweenQuestion: 1.5
 --- !u!4 &54097157
 Transform:
   m_ObjectHideFlags: 0
@@ -798,6 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287126185}
   - component: {fileID: 287126186}
+  - component: {fileID: 287126187}
   m_Layer: 5
   m_Name: False_Button
   m_TagString: Untagged
@@ -819,7 +826,7 @@ RectTransform:
   - {fileID: 1924096856}
   - {fileID: 1323346721}
   m_Father: {fileID: 2092957029}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -834,6 +841,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287126184}
   m_CullTransparentMesh: 0
+--- !u!111 &287126187
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287126184}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2a505628ca1a9d440b0cfcd1ae2970a4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2a505628ca1a9d440b0cfcd1ae2970a4, type: 2}
+  - {fileID: 7400000, guid: 6bc58fc77f56dd947994aa090eb42c8a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &292178148
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,8 +936,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1721110892}
   m_HandleRect: {fileID: 1721110891}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.31665862
+  m_Value: 0.9999805
+  m_Size: 0.27740186
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1521,7 +1545,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -205, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 311, y: 153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375992383
 MonoBehaviour:
@@ -2299,8 +2323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0037231445, y: -1055.8}
-  m_SizeDelta: {x: 0, y: 2111.6}
+  m_AnchoredPosition: {x: -0.0037231445, y: -1274.4}
+  m_SizeDelta: {x: 0, y: 2548.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760720544
 MonoBehaviour:
@@ -2322,23 +2346,24 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Kourabie\r\n\r\n \r\n\r\nKourabie is a high quality kind of biscuit, a
-    traditional Greek cookie, made with pure butter & whole roasted almonds dusted
-    in icing sugar. A traditional dessert, deeply appreciated throughout Greece, that
-    leaves its sweet smell and flavor in every house (mostly) during Christmas holidays.
-    We, the Chrisanthidis family, as the heirs of this traditional recipe, have managed
-    to keep this unique, beloved flavor alive and promote it throughout the world,
-    using only the purest Greek ingredients, no preservatives, and handmade production
-    methods.\r\n\r\n \r\n\r\n Company\u2019s History\r\n\r\nIn 1980 the Chrisanthidis
-    family opened their first family workshop \u2013 store in NeaKarvali, Kavala,
-    where they made their famous kourabie with the traditional flavor of a home recipe
-    that has been passed down for generations. Year by year, the family and their
-    first partners experimented, tried, rejected, and finally created a wide range
-    of premium quality, comparable to the best pastry shops at the time. Meanwhile,
-    the number of their customers and the reputation of their products started to
-    take off. So, in a very short time, they made it into a modern, dynamic bakeryand
-    pastry production site.\r\n\r\nToday, the company is located in a 5,000 sq.m.
-    site, featuring cutting-edge technology and highly trained staff.\r\n\r\n \r\n\r\nAll
+  m_text: "<u><size=220%><color=#ECC36A>Kourabie\r</u></size></color=#ECC36A>\n\r\n
+    \r\nKourabie is a high quality kind of biscuit, a traditional Greek cookie, made
+    with pure butter & whole roasted almonds dusted in icing sugar. A traditional
+    dessert, deeply appreciated throughout Greece, that leaves its sweet smell and
+    flavor in every house (mostly) during Christmas holidays. We, the Chrisanthidis
+    family, as the heirs of this traditional recipe, have managed to keep this unique,
+    beloved flavor alive and promote it throughout the world, using only the purest
+    Greek ingredients, no preservatives, and handmade production methods.\r\n\r\n
+    \r\n\r\n<u><size=180%><color=#ECC36A>Company's History\r</u></size></color=#ECC36A>\n\r\nIn
+    1980 the Chrisanthidis family opened their first family workshop \u2013 store
+    in NeaKarvali, Kavala, where they made their famous kourabie with the traditional
+    flavor of a home recipe that has been passed down for generations. Year by year,
+    the family and their first partners experimented, tried, rejected, and finally
+    created a wide range of premium quality, comparable to the best pastry shops at
+    the time. Meanwhile, the number of their customers and the reputation of their
+    products started to take off. So, in a very short time, they made it into a modern,
+    dynamic bakeryand pastry production site.\r\n\r\nToday, the company is located
+    in a 5,000 sq.m. site, featuring cutting-edge technology and highly trained staff.\r\n\n\n\nAll
     ingredients are certified and always chosen for their fine quality, receiving
     the assurance of constant food safety inspections under the FSSC 22000 certification..\r\n\r\n
     \r\n\r\nAt the same time, we always invest in upgrading production lines, improving
@@ -2374,8 +2399,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 43
+  m_fontSizeBase: 43
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2415,12 +2440,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0.4182129}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 1873
+    characterCount: 1866
     spriteCount: 0
-    spaceCount: 297
+    spaceCount: 294
     wordCount: 277
     linkCount: 0
-    lineCount: 58
+    lineCount: 60
     pageCount: 1
     materialCount: 2
   m_havePropertiesChanged: 0
@@ -2486,7 +2511,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 197, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 267, y: 153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770836212
 MonoBehaviour:
@@ -2796,8 +2821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 271.5197, y: 338.76}
-  m_SizeDelta: {x: 242.87, y: 216.53}
+  m_AnchoredPosition: {x: 234.72, y: 369.8}
+  m_SizeDelta: {x: 235.65, y: 216.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978719804
 MonoBehaviour:
@@ -2820,7 +2845,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 97217e8f60f7bae47bea932e980faf0e, type: 3}
+    m_Font: {fileID: 12800000, guid: ad105ce5c1a24a84f87df69819b699f8, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -3017,7 +3042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &986268842
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3318,7 +3343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073633551}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -3379,7 +3404,7 @@ RectTransform:
   - {fileID: 1660477086}
   - {fileID: 282230473}
   m_Father: {fileID: 2092957029}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -4295,6 +4320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1555709532}
+  - component: {fileID: 1555709533}
   m_Layer: 5
   m_Name: True_Button
   m_TagString: Untagged
@@ -4323,6 +4349,23 @@ RectTransform:
   m_AnchoredPosition: {x: -213.9, y: 369.8}
   m_SizeDelta: {x: 329, y: 203}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!111 &1555709533
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555709531}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8081381438185884e8b716e9cec5a17c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8081381438185884e8b716e9cec5a17c, type: 2}
+  - {fileID: 7400000, guid: da7e39b5d3bb2f34986752e828c665a9, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1591294062
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,8 +4882,8 @@ RectTransform:
   m_Father: {fileID: 1302356395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6833414}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4857,7 +4900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.23137255}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5192,8 +5235,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -249.27, y: 352.9}
-  m_SizeDelta: {x: 218.63, y: 223.04}
+  m_AnchoredPosition: {x: -237.8, y: 369.8}
+  m_SizeDelta: {x: 229.5, y: 223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833942720
 MonoBehaviour:
@@ -6252,7 +6295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2092957029
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6267,8 +6310,8 @@ RectTransform:
   - {fileID: 978719803}
   - {fileID: 1833942719}
   - {fileID: 1555709532}
-  - {fileID: 1161366813}
   - {fileID: 287126185}
+  - {fileID: 1161366813}
   - {fileID: 1591294063}
   - {fileID: 1366329883}
   m_Father: {fileID: 1381856898}
