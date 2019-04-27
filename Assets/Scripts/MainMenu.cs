@@ -2,31 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // Permet de gèrer les scènes
+using UnityEditor;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-
-    public void PlayGame()
+    public Image Loader;
+    public Image Fade;
+    public Image Static;
+    private void Awake()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        Screen.orientation = ScreenOrientation.Portrait;
     }
 
 
-    //public void Permission()
-    //{
+    public void PlayGame()
+    {
 
-    //    AndroidRuntimePermissions.Permission result = AndroidRuntimePermissions.RequestPermission("android.permission.CAMERA");
-    //    if (result == AndroidRuntimePermissions.Permission.Granted)
-    //        Debug.Log("We have permission to access the camera!");
-    //    else
-    //        Debug.Log("Permission state: " + result);
-    //}
+        StartCoroutine(LoadAsync(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadAsync(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+
+        Fade.gameObject.SetActive (false);
+        Static.gameObject.SetActive(false);
+        Loader.gameObject.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            Debug.Log(operation.progress);
+                yield return null;
+        }
+    }
+
 
     public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
 
+    }
+
+    public void OpenWebSite()
+    {
+        Application.OpenURL("https://www.chrisanthidis.gr/en/");
     }
 }

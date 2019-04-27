@@ -58,6 +58,7 @@ public class DefaultInitializationErrorHandler : VuforiaMonoBehaviour
     void Start()
     {
         SetupGUIStyles();
+        Screen.orientation = ScreenOrientation.AutoRotation;
     }
 
     void OnGUI()
