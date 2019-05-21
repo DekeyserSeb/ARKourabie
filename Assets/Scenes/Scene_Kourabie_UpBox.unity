@@ -6044,13 +6044,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '--> Meanwhile, we enabled you to point this QR-Code with your camera. It
-    will act like if it was the top AND bottom covers of the Kourabie Box at the same
-    time!
-
-    Yes, we''re cool :)
-
-'
+  m_text: --> Meanwhile, we enabled you to point this QR-Code with your camera. Press
+    the SCAN MODE Button right under the Instructions button to switch to QR-Code.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6096,7 +6091,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 90
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -6116,15 +6111,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -247.4144, w: -165.47018}
+  m_margin: {x: 0, y: 0, z: -435.26566, w: -33.00666}
   m_textInfo:
     textComponent: {fileID: 302306778}
-    characterCount: 180
+    characterCount: 154
     spriteCount: 0
-    spaceCount: 36
-    wordCount: 35
+    spaceCount: 25
+    wordCount: 26
     linkCount: 0
-    lineCount: 6
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -6597,8 +6592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -0.00012207031}
+  m_AnchoredPosition: {x: 0, y: 0.024963}
+  m_SizeDelta: {x: 0, y: 0.050049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389457667
 MonoBehaviour:
@@ -7359,14 +7354,14 @@ RectTransform:
   m_GameObject: {fileID: 663718891}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.3054123, y: 2.3054123, z: 2.3054123}
   m_Children: []
   m_Father: {fileID: 1613141466}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 359, y: -2378.8003}
+  m_AnchoredPosition: {x: 21, y: -2789}
   m_SizeDelta: {x: 290, y: 290}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663718893
@@ -8306,7 +8301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -16.050049, y: -72.22534}
+  m_AnchoredPosition: {x: -16.050049, y: -72.225464}
   m_SizeDelta: {x: 32.099976, y: -145.09998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &791333669
@@ -8349,7 +8344,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 421091173}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.58871055
+  m_Size: 0.4611207
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8540,7 +8535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -299.78748, y: -2785}
+  m_AnchoredPosition: {x: -299.78748, y: -3536}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848790189
@@ -8563,8 +8558,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'PS: that''s the same QR-Code allowing you to download the app! Share it
-    with your friends :)
+  m_text: 'PS: that''s the same QR-Code allowing you to download the app! So all your
+    friends can find it easily :)
 
 
 '
@@ -8613,7 +8608,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 92
+  m_firstOverflowCharacterIndex: 94
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -8636,12 +8631,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -430.04916, w: -45.782906}
   m_textInfo:
     textComponent: {fileID: 848790189}
-    characterCount: 93
+    characterCount: 105
     spriteCount: 0
-    spaceCount: 18
-    wordCount: 16
+    spaceCount: 21
+    wordCount: 19
     linkCount: 0
-    lineCount: 3
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -8734,7 +8729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: -0.00012207031}
   m_SizeDelta: {x: 0, y: 0.00024414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864970874
@@ -10882,7 +10877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -299.78748, y: -2593}
+  m_AnchoredPosition: {x: -299.78748, y: -3203}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526806092
@@ -10905,8 +10900,14 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: You just have to press the SCAN MODE Button right under the Instructions
-    button to switch to QR-Code.
+  m_text: 'For example, ask a friend to take a picture of it and display it big on
+    his/her screen.
+
+
+    It will act like if it was the top AND bottom covers of the Kourabie Box at the
+    same time!
+
+    Yes, we enabled that just for you :)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10972,15 +10973,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -453.47668, w: -69.35158}
+  m_margin: {x: 0, y: 0, z: -453.47668, w: -302.84665}
   m_textInfo:
     textComponent: {fileID: 1526806092}
-    characterCount: 101
+    characterCount: 216
     spriteCount: 0
-    spaceCount: 17
-    wordCount: 18
+    spaceCount: 46
+    wordCount: 46
     linkCount: 0
-    lineCount: 3
+    lineCount: 6
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -11323,8 +11324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.012512207, y: -1507.6}
-  m_SizeDelta: {x: 1048, y: 3015.2}
+  m_AnchoredPosition: {x: -0.012512207, y: -1924.8}
+  m_SizeDelta: {x: 1048, y: 3849.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1613141467
 CanvasRenderer:
